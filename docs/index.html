@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta name="description" content="Commission test" />
+        <meta charset="utf-8" />
+        <title>Commission test</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="nilllzz" />
+
+        <!-- Open Graph tags -->
+        <meta property="og:site_name" content="Commission test" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Commission test" />
+        <meta property="og:description" content="Testing a dynamic commission sheet" />
+        <meta property="og:image:width" content="1000" />
+        <meta property="og:image:height" content="540" />
+
+        <!-- Twitter tags -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:title" content="Commission test" />
+        <meta property="twitter:description" content="Testing a dynamic commission sheet" />
+
+        <!-- Imports -->
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" type="image/x-icon" href="favicon.ico" />
+    </head>
+
+    <body>
+        <script src="index.js"></script>
+
+        <main>
+            <div class="character-container" ondragover="handleDragOver(event)">
+                <img src="img/character.png" class="character character-hidden" />
+
+                <div class="character character-visible-container">
+                    <div class="character-visible" id="character-visible">
+                        <img src="img/character.png" class="character" id="character-img" />
+                    </div>
+
+                    <div class="dragger">
+                        <div
+                            class="dragger-handle"
+                            id="dragger-handle"
+                            draggable="true"
+                            ondragstart="handleDragStart(event)"
+                            ondragend="handleDragEnd(event)"
+                        ></div>
+                    </div>
+                </div>
+            </div>
+            <div class="info-container">
+                <div>
+                    <span class="pricing" id="pricing"></span>
+                </div>
+                <div>
+                    <span class="pricing-description" id="description"></span>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

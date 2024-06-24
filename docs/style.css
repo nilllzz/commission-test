@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "ArchitectsDaughter";
+    src: url("ArchitectsDaughter.ttf"), "Comic Sans MS", sans-serif;
+}
+
+html {
+    height: 100%;
+    font-family: "ArchitectsDaughter";
+}
+
+body {
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.character-container {
+    position: relative;
+    width: 250px;
+    aspect-ratio: 505 / 1019;
+}
+
+.character {
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.character-hidden {
+    z-index: 1;
+    filter: grayscale(1);
+    opacity: 0.5;
+}
+
+.character-visible-container {
+    aspect-ratio: 505 / 1019;
+    z-index: 2;
+}
+
+.character-visible {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    overflow: hidden;
+
+    transition: height 0.1s ease;
+}
+
+.dragger {
+    position: relative;
+    z-index: 2;
+
+    width: 100%;
+    border-top-color: gray;
+    border-top-width: 2px;
+    border-top-style: dashed;
+
+    display: flex;
+    justify-content: center;
+}
+
+.dragger-handle {
+    width: 40px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    margin-top: -22px;
+
+    cursor: move;
+    background-color: rgba(200, 200, 200, 0.85);
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(128, 128, 128);
+}
+
+.info-container {
+    width: 300px;
+}
+
+.pricing {
+    font-size: 24px;
+    font-weight: bold;
+}
