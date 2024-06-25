@@ -24,7 +24,7 @@ main {
 .character-container {
     position: relative;
     width: 250px;
-    aspect-ratio: 505 / 1019;
+    aspect-ratio: 1215 / 2148;
 }
 
 .character {
@@ -41,7 +41,7 @@ main {
 }
 
 .character-visible-container {
-    aspect-ratio: 505 / 1019;
+    aspect-ratio: 1215 / 2148;
     z-index: 2;
 }
 
@@ -78,6 +78,10 @@ main {
     border-style: solid;
     border-width: 1px;
     border-color: rgb(128, 128, 128);
+}
+
+.dragger-handle:hover {
+    background-color: rgba(170, 170, 170, 0.85);
 }
 
 .info-container {

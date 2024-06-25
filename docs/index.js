@@ -23,7 +23,7 @@ const pricings = [
     {
         name: "Upper Body",
         description: "Head, neck, shoulders, arms and upper body up to waist",
-        height: 51,
+        height: 50,
         price: 25,
     },
     {
@@ -75,7 +75,7 @@ function handleDragOver(e) {
     const topY = characterVisibleEl.getBoundingClientRect().y;
     const offset = e.clientY - topY;
     const maxHeight = characterImg.clientHeight;
-    const newHeight = (offset / maxHeight) * 100;
+    const newHeight = Math.min(100, (offset / maxHeight) * 100);
 
     updatePricing(newHeight);
     setHeight(newHeight);
